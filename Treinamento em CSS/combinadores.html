@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores</title>
+    <style>
+        /*
+        Combinadores em CSS
+
+        O que são combinadores?
+        São formas de selecionar elementos HTML com base na sua relação com outros elementos.
+
+        Tipos de combinadores:
+        - 1. Combinador descendente (espaço)
+        - 2. Combinador filho (>)
+        - 3. Combinador irmão adjacente (+)
+        - 4. Combinador irmão geral (~)
+
+        [Seletor1][combinador][Seletor2]{}
+        */
+
+        /*
+        1. Combinador descendente (espaço)
+        Seletor1 Seletor2 {}
+        Seletor2 é descendente de Seletor1
+        */
+
+        /*
+        2. Combinador filho (>)
+        Seletor1 > Seletor2 {}
+        Seletor2 é filho de Seletor1
+        */
+
+        /*
+        3. Combinador irmão adjacente (+)
+        Seletor1 + Seletor2 {}
+        Seletor2 é o primeiro irmão adjacente de Seletor1
+        */
+
+        /*
+        4. Combinador irmão geral (~)
+        Seletor1 ~ Seletor2 {}
+        Seletor2 é irmão de Seletor1
+        */
+
+        li {
+            color: red;
+        }
+
+        #lista-01 li {
+            color: blue;
+        }
+
+        #subitem-02>li {
+            color: green;
+        }
+
+        #subitem-01+li {
+            color: yellow;
+        }
+
+        .fundo-azul~#subitem-03~li {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Combinadores em CSS</h1>
+        <ul>
+            <li class="fundo-verde" id="lista-01">
+                <div>Item 1</div>
+                <ul id="subitem-01">
+                    <li>Sub Item A</li>
+                    <li>Sub Item B</li>
+                    <li>Sub Item C</li>
+                </ul>
+            </li>
+            <li class="fundo-verde" id="lista-02">
+                <div>Item 2</div>
+                <ul id="subitem-02">
+                    <li>Sub Item A</li>
+                    <li>Sub Item B</li>
+                    <li>Sub Item C</li>
+                </ul>
+            </li>
+            <li class="fundo-azul" id="lista-03">
+                <div>Item 3</div>
+                <ul id="subitem-03">
+                    <li>Sub Item A</li>
+                    <li>Sub Item B</li>
+                    <li>Sub Item C</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

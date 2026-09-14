@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores de Atributos</title>
+    <style>
+        /* [atributo] Seleciona todos os elementos que possuem o atributo title */
+        [title] {
+            color: #8000ff;
+        }
+
+        /* [atributo~="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor contém "hbo" */
+        [title~="hbo"] {
+            color: #ff6600;
+        }
+
+        /* [atributo|="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor começa com "hbo-" */
+        [title|="hbo"] {
+            color: #ffa500;
+        }
+
+        /* [atributo^="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor começa com "net" */
+        [title^="net"] {
+            color: #ff0000;
+        }
+
+        /* [atributo$="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor termina com "n" */
+        [href$="login"] {
+            background-color: #00ff00;
+        }
+
+        /* [atributo*="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor contém "is" */
+        [href*="is"] {
+            background-color: #0000ff;
+        }
+
+        /* [atributo="valor"] Seleciona todos os elementos que possuem o atributo title e que o seu valor é exatamente "hbo" */
+        [title="hbo"] {
+            color: #ffff00;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="https://www.netflix.com" title="netflex">Netflix</a></li>
+            <li><a href="https://www.disneyplus.com" title="disney">Disney+</a></li>
+            <li><a href="https://www.hbo.com" title="hbo">HBO</a></li>
+            <li><a href="https://www.primevideo.com" title="amazon">Amazon</a></li>
+            <li><a href="https://www.hbomax.com" title="hbo-max">HBO Max</a></li>
+            <li><a href="https://www.paramountplus.com/login" title="paramount">Paramount</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
